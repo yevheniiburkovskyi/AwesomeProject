@@ -1,0 +1,7 @@
+{
+  "name": "AwesomeProject",
+  "displayName": "AwesomeProject",
+  "expo": {
+    "plugins": ["expo-image-picker"]
+  }
+}
