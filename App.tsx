@@ -38,7 +38,12 @@ const App = () => {
 
   const deleteImage = useCallback(async () => {
     if (assetState) {
-      await MediaLibrary.deleteAssetsAsync(assetState);
+      const isDeleted = await MediaLibrary.deleteAssetsAsync(assetState);
+
+      if (isDeleted) {
+        setImage(null);
+        setAssetState(null);
+      }
     }
   }, [assetState]);
 
